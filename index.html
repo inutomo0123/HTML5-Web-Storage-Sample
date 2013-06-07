@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>web storage</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/web-storage.js"></script>
+<link rel="stylesheet" href="css/html5-doctor-reset-stylesheet.min.css">
+<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<article class="widget" style="width: 500px; float: left;">
+<h1>methods</h1>
+<div class="content">
+<dl>
+<dt>getItem(key)</dt>
+<dd>
+	<!-- key&nbsp;<input id="getItem-key" type="text" name="getItem-key" size="10" value="key"> -->
+	key&nbsp;<select id="getItem-key" name="getItem-key"></select>
+	&nbsp;<button id="getItem">getItem(key)</button>
+	value&nbsp;<input id="getItem-value" type="text" name="getItem-value" size="10" value="" readonly="readonly">
+</dd>
+<dt>setItem(key, value)</dt>
+<dd>
+	key&nbsp;<input id="setItem-key" type="text" name="setItem-key" size="10" value="key">
+	value&nbsp;<input id="setItem-value" type="text" name="setItem-value" size="10" value="value">
+	&nbsp;<button id="setItem">setItem(key, value)</button>
+</dd>
+<dt>removeItem(key)</dt>
+<dd>
+	<!-- key&nbsp;<input id="removeItem-key" type="text" name="removeItem-key" size="10" value="key"> -->
+	key&nbsp;<select id="removeItem-key" name="removeItem-key"></select>
+	&nbsp;<button id="removeItem">removeItem(key)</button>
+</dd>
+<dt>clear()</dt>
+<dd>
+	<button id="clear">claer()</button>
+</dd>
+</dl>
+</div>
+</article>
+
+<article class="widget" style="width: 300px; float: left;">
+<h1>Web Storage</h1>
+<div class="content">
+<dl id="storageView">
+</dl>
+</div>
+</article>
+
+</body>
+</html>
+

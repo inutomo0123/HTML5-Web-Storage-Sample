@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>web storage</title>
+<script src="js/jquery-2.0.2.min.js"></script>
+<style>
+body {
+	font-family: sans-serif;
+}
+
+dd:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+dl {
+	border: solid 1px silver;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+</style>
+<script>
+
+
+$(function(){
+	strage = sessionStrage;
+	
+	viewStorage();
+});
+
+function viewStorage(){
+	
+	var i = 0;
+	
+	strage.forEach(function(){
+		i++;
+	});
+	
+	alert(i);
+	 
+	
+}
+
+
+</script>
+</head>
+<body>
+<header>
+</header>
+<article>
+<dl>
+<dt>getItem(key)</dt>
+<dd>
+	key<input id="getItem-key" type="text" name="getItem-key" size="10">
+	<button id="getItem">getItem(key)</button>
+</dd>
+<dt>setItem(key, value)</dt>
+<dd>
+	key<input id="setItem-key" type="text" name="setItem-key" size="10">
+	value<input id="setItem-value" type="text" name="setItem-value" size="10">
+	<button id="setItem">setItem(key, value)</button>
+</dd>
+<dt>removeItem(key)</dt>
+<dd>
+	key<input id="removeItem-key" type="text" name="removeItem-key" size="10">
+	<button id="removeItem">removeItem()</button>
+</dd>
+<dt>clear()</dt>
+<dd>
+	<button id="clear">claer()</button></dd>
+</dl>
+</article>
+
+<article>
+<dl id="storageView">
+</dl>
+</article>
+
+
+<footer>
+</footer>
+</body>
+</html>
+
